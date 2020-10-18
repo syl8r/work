@@ -1,0 +1,31 @@
+html, body,
+p {
+padding: 0;
+border: 0;
+margin: 0;
+font-size: 100%;
+font: inherit;
+}
+body {
+    background-color: lightblue;
+    }
+h1, h2 {
+     color: white;
+    text-align: center;
+        }
+.aaaaa{
+    width: 500px;
+    padding: 0px 20px 20px 650px;
+    margin: 30px 0 0 0;
+}
+.bbb{
+    width: 250px;
+    padding: 0px 0px 0px 0px;
+}
+.ccc{
+    width: 155px;
+    padding: 0px 0px 0px 0px;
+}
+.ddd{
+    border: .75px solid #9ebea6;
+}
