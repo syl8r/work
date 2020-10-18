@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="sale_input.php">
+        <meta charset="utf-8">
+        <title>Sale Order</title>
+    </head>
+    
+      <div align="right">
+          <h1>Sale Order</h1>
+
+<body>
+        </div>
+            <h2>Company</h2>
+      <div>
+          <h3>Bill To:
+              <br>Ship To:
+            </h3>
+      </div>
+
+      
+      <head>
+        <style>
+        table {
+            width: 100%;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        </style>
+        </head>
+
+    <table class="type1">
+        <tr>
+            <th>Order</th>
+            <th>Customer PO</th>
+            <th>P.O. DATE</th>
+            <th>Requested Delivery Date</th>
+            <th>SHIPPED VIA</th>
+            <th>F.O.B. POINT</th>
+            <th>TERMS</th>
+        </tr>
+
+        <tr class="details">
+            <td>
+                <?=$ds["order"]?>
+            </td>
+            <td class="r">
+                <?=$ds["customer"]?>
+            </td>
+            <td class="r">
+                <?=$ds["po_date"]?>
+            </td>
+            <td class="r">
+                <?=$ds["requested_delivery_date"]?>
+            </td>
+            <td class="r">
+                <?=$ds["shipped_via"]?>
+            </td>
+            <td class="r">
+                <?=$ds["fob_point"]?>
+            </td>
+            <td class="r">
+                <?=$ds["terms"]?>
+            </td>
+        </tr>
+
+    </table>
+        <br>
+        <br>
+        <br>
+    <table class="type1" id="t01">
+        <tr>
+            <th>Quantity</th>
+            <th>Material</th>
+            <th>Material Description</th>
+            <th>Unit Type</th>
+            <th>Unit Price</th>
+            <th>Total</th>
+        </tr>
+
+        <tr class="item">
+            <td><?=$row["product_id"]?></td>
+            <td><?=$row["product_name"]?></td>
+           
+            <td><?=$row["qty"]?></td>
+            <td><?=$row["price_per_unit"]?></td>
+            <td><?=$tt?></td>
+            <td><?=$adis?></td>
+        </tr>
+        
+
+
+
+
+
+        <table class="type1" id="t01">
+        <tr>
+            <td rowspan="3">SUBTOTAL
+                <br>SALE TAX
+                <br>SHIPPED & HANDLING
+                <br>OTHER
+                <br>TOTAL
+            </td>
+            <td>
+                <br>Exempt
+                <br>Included
+                <br>N/A
+                <br>
+            </td>
+
+          </tr>
+          </table>
+    </table>
+       
+    
+    <a href="picking.html"><button type="button" class="btn btn-outline-primary">Picking Docdument</button></a>       
+</div>
+
+
+
+</body>      
+</html>
